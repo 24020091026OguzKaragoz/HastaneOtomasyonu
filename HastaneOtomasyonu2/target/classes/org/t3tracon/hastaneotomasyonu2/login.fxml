@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<TabPane xmlns:fx="http://javafx.com/fxml" fx:controller="org.t3tracon.hastaneotomasyonu2.controller.LoginController">
+    <tabs>
+        <Tab text="Danışma" closable="false">
+            <VBox alignment="CENTER" spacing="10.0">
+                <padding>
+                    <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+                </padding>
+                <Label text="Danışma Girişi" style="-fx-font-size: 18px; -fx-font-weight: bold;"/>
+                <TextField fx:id="danismaTcField" promptText="TC Kimlik No"/>
+                <PasswordField fx:id="danismaParolaField" promptText="Parola"/>
+                <Button text="Giriş Yap" onAction="#onDanismaLogin"/>
+                <Label fx:id="danismaErrorLabel" textFill="RED"/>
+            </VBox>
+        </Tab>
+        <Tab text="Hasta" closable="false">
+            <VBox alignment="CENTER" spacing="10.0">
+                <padding>
+                    <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+                </padding>
+                <Label text="Hasta Girişi" style="-fx-font-size: 18px; -fx-font-weight: bold;"/>
+                <TextField fx:id="hastaTcField" promptText="TC Kimlik No"/>
+                <PasswordField fx:id="hastaParolaField" promptText="Parola"/>
+                <Button text="Giriş Yap" onAction="#onHastaLogin"/>
+                <Label fx:id="hastaErrorLabel" textFill="RED"/>
+            </VBox>
+        </Tab>
+        <Tab text="Doktor" closable="false">
+            <VBox alignment="CENTER" spacing="10.0">
+                <padding>
+                    <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+                </padding>
+                <Label text="Doktor Girişi" style="-fx-font-size: 18px; -fx-font-weight: bold;"/>
+                <TextField fx:id="doktorTcField" promptText="TC Kimlik No"/>
+                <PasswordField fx:id="doktorParolaField" promptText="Parola"/>
+                <Button text="Giriş Yap" onAction="#onDoktorLogin"/>
+                <Label fx:id="doktorErrorLabel" textFill="RED"/>
+            </VBox>
+        </Tab>
+    </tabs>
+</TabPane>
